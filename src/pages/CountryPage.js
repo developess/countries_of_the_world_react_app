@@ -23,10 +23,16 @@ export const CountryPage = () => {
 
   const { country: res } = data;
 
+  const keys = Object.keys(res);
   return (
     <PageWrapper>
       <Link to="/countries">Back to list</Link>
       <h1>{res["Country"]}</h1>
+      <ul>
+        {keys.map((key, index) => (
+          <li key={index}>{`${key}:  ${res[key]}`}</li>
+        ))}
+      </ul>
     </PageWrapper>
   );
 };
