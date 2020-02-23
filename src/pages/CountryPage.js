@@ -8,7 +8,9 @@ const baseUrl = "http://localhost:4000/api";
 export const CountryPage = () => {
   const { country } = useParams();
 
-  const [{ data, loading, error }] = useAxios(`${baseUrl}/country/${country}`);
+  const [{ data, loading, error }] = useAxios(
+    `${baseUrl}/countries/${country}`
+  );
 
   if (loading) return <PageWrapper>Loading...</PageWrapper>;
 
@@ -24,7 +26,7 @@ export const CountryPage = () => {
   return (
     <PageWrapper>
       <Link to="/countries">Back to list</Link>
-      <h1>{res.name}</h1>
+      <h1>{res["Country"]}</h1>
     </PageWrapper>
   );
 };

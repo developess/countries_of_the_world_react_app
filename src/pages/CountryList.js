@@ -57,7 +57,7 @@ const Row = ({ name, region, area, population, gdp }) => (
 );
 
 export const CountryList = () => {
-  const [{ data, loading, error }] = useAxios(`${baseUrl}/country`);
+  const [{ data, loading, error }] = useAxios(`${baseUrl}/countries`);
 
   if (loading) return <PageWrapper>Loading...</PageWrapper>;
 
@@ -74,18 +74,16 @@ export const CountryList = () => {
       <table css={table}>
         <tbody>
           <TableHeadings />
-          {data.countries.map(
-            ({ name, region, area, population, gdp }, index) => (
-              <Row
-                key={index}
-                name={name}
-                region={region}
-                area={area}
-                population={population}
-                gdp={gdp}
-              />
-            )
-          )}
+          {data["countries"].map((country, index) => (
+            <Row
+              key={index}
+              name={country["Country"]}
+              region={country["Region"]}
+              area={country["Area (sq. mi.)"]}
+              population={country["Population"]}
+              gdp={country["GDP ($ per capita)"]}
+            />
+          ))}
         </tbody>
       </table>
     </PageWrapper>
