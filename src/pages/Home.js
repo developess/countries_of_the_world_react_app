@@ -8,7 +8,7 @@ const welcome = css`
 `;
 
 const image = css`
-  height: 200px;
+  height: 300px;
 `;
 
 const buttonStyles = css`
@@ -22,6 +22,10 @@ const buttonStyles = css`
     display: block;
     text-decoration: none;
   }
+  &:hover {
+    transition: 0.3 ease;
+    background-color: lightsteelblue;
+  }
 `;
 
 export const Home = () => {
@@ -30,13 +34,13 @@ export const Home = () => {
       <div css={welcome}>
         <img
           css={image}
-          src="http://pngimg.com/uploads/globe/globe_PNG43.png"
+          src="https://media.giphy.com/media/Ur1ePKk5h82J2nKUmm/giphy.gif"
           alt="globe"
         />
         <h1>Welcome to Hello, World</h1>
-        <p>An app to help you Discover countries of the world</p>
+        <p>An app to help you discover countries of the world</p>
         <button css={buttonStyles}>
-          <Link to="/countries">Expore</Link>
+          <Link to="/countries">Explore</Link>
         </button>
       </div>
     </PageWrapper>

@@ -4,7 +4,7 @@ import { css } from "styled-components";
 const wrapper = css`
   min-height: calc(100vh - 76px);
   padding: 40px 20px;
-  background: #e0f3ff;
+  background: #f5fbff;
 `;
 
 export const PageWrapper = ({ children }) => {

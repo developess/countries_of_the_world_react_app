@@ -31,6 +31,7 @@ const optionList = css`
 const navItem = css`
   transition: 0.5s ease;
   color: white;
+  font-weight: 500;
   a {
     text-decoration: none;
   }

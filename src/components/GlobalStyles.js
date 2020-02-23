@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Rubik';
+    font-family: 'Cutive Mono';
   }
 
   a {
