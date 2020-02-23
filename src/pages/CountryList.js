@@ -1,8 +1,12 @@
 import React from "react";
 import { PageWrapper } from "../components";
-import { css } from "styled-components";
-import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
+import { Link as OriginalLink } from "react-router-dom";
 import useAxios from "axios-hooks";
+
+const Link = styled(OriginalLink)`
+  color: dodgerblue;
+`;
 
 const baseUrl = "http://localhost:4000/api";
 
